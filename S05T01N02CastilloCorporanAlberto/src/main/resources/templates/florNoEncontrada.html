@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="inicio :: head ">
+<meta charset="UTF-8">
+<title></title>
+</head>
+
+<body>
+<h1>Error al realizar la busqueda</h1>
+<p>
+<a th:text="${mensaje}"></a>
+<br/>
+<a th:href="@{/flor/getOne}">Volver a buscar</a>
+<br/>
+<a th:href="@{/}">Volver a la pagina de inicio</a>
+</p>
+</body>
+</html>

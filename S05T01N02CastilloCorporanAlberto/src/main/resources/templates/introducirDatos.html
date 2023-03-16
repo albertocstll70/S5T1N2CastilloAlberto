@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="inicio :: head ">
+<meta charset="UTF-8">
+<title>Agregar Flor</title>
+</head>
+<body>
+<h1> Rellene los siguientes datos:</h1>
+
+ 
+ <form th:object="${flor}" th:action="@{/flor/guardar}" method="post">
+ 
+  <input type="hidden" name="pk_florID" th:field="*{pk_florID}"/>
+  
+    <label>Nombre:</label>    
+    <input type="text" th:field="*{nomFlor}"placeholder="Escribe el nombre de la sucursal" />
+    
+<div th:errors=*{nomFlor}></div>
+    <label>Pais:</label>
+    <input type="text"  th:field="*{paisFlor}"  placeholder="Escribe el país "/>
+   <div th:errors=*{paisFlor}></div>
+  
+
+    <button type="submit">Guardar</button>
+</form>
+ 
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="inicio :: head ">
+<meta charset="UTF-8">
+<title>Buscar Flor</title>
+</head>
+<body>
+<h1> Introduce el ID de la Flor</h1>
+
+<form th:action="@{/flor/getOne/{id}(id=${id})}" method="get">
+    <label>ID:</label>
+    <input type="number" name="id" th:value="${id}">
+    <button type="submit">Buscar</button>
+</form>
+
+</body>
+</html>

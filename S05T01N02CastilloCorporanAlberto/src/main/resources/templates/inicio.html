@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" /> 
+ <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" ></script>
+ 
+<title>Gestion Flores</title>
+</head>
+<body>
+<h1>Inicio</h1>
+<p>
+<a th:href="@{/flor/getAll}" class="btn btn-outline-danger" >Mostrar todas las Flores</a>
+<br/><br/>
+<a th:href="@{/flor/getOne}" class="btn btn-outline-danger" >Buscar una Flor</a>
+</p>
+
+
+
+</body>
+</html>

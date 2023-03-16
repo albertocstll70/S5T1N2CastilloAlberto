@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Application</title>
+    <script src="/webjars/swagger-ui/${swagger-ui.version}/swagger-ui.js"></script>
+    <link href="/webjars/swagger-ui/${swagger-ui.version}/swagger-ui.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    <script>
+        window.onload = function() {
+            // Build a system
+            const ui = SwaggerUIBundle({
+                url: "/v2/api-docs",
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIBundle.SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: "StandaloneLayout"
+            });
+        }
+    </script>
+</body>
+</html>

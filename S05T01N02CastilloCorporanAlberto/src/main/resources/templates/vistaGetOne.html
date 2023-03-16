@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="inicio :: head ">
+<meta charset="UTF-8">
+<title>Flor</title>
+
+</head>
+<body>
+
+
+
+<h1>Sucursal</h1>
+<table border ="1" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Pais</th>
+            <th>Tipo Flor</th>
+            <th>Update</th>
+            <th>Delete</th>
+           
+        </tr>
+    </thead>
+    <tbody>   
+         <tr th:each="flor: ${florDTO}">
+				<td th:text="${flor.pk_florID}">
+				<td th:text="${flor.nomFlor}">
+				<td th:text="${flor.paisFlor}">
+				<td th:text="${flor.tipusFlor}">
+				<td><a th:href="@{/flor/update/} + ${flor.pk_florID}" th:text="update"></a></td>
+				<td><a th:href="@{/flor/delete/}+ ${flor.pk_florID}" th:text="delete"></a></td>
+           
+        </tr>
+    </tbody>
+</table>
+
+		
+	<a th:href="@{/}">Volver a la pagina de inicio</a>	
+		
+
+	</body>
+</html>
